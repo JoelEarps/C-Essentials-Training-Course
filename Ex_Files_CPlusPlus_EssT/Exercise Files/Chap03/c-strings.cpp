@@ -11,3 +11,5 @@ int main() {
     }
     return 0;
 }
+//const character pointer is the same as the string array
+//concantenate literal strings using "" "" putting them next to each other

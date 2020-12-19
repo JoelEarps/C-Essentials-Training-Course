@@ -14,3 +14,12 @@ int main() {
     if(typeid(x) == typeid(string)) puts("x is string");
     return 0;
 }
+
+//type tells yo sign and size of value
+// primitives types - integers, floats, boolean
+//compounds types serve as containers for types - arrays - flexible and low overhead
+//structure - sequential set of objects of various types
+//classes are based on structures - structure that defaults to private memberhsip
+//union is a set of overlapping objects
+//pointers - reference to object of particular type
+//references are immutable
