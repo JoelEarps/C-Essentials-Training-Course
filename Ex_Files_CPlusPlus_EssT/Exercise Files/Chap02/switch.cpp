@@ -28,3 +28,7 @@ int main() {
             break;
     }
 }
+
+//switch statement chooses the case for the excution - it tests the value that is past to it against the case statements
+//it then branches execution to the matching statements, without breaks it would jusy continue down from the point of x i.e if x is 3 it would do 3 and 4
+//default is optional - if no case statement exists - otherwise would just break out and continue from after
