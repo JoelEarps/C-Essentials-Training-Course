@@ -15,6 +15,10 @@ void f( const char * s ) {
 }
 
 int main() {
-    f(NULL);
+    f(nullptr);
     return 0;
 }
+// null pointer always been problematic in c++
+//c++ can overload functions with functions with the same name, will look at value being passed and then use right function
+//calling it with null means it doesnt know if it a character or a int
+//nullptr is a special value - a pointer of any type

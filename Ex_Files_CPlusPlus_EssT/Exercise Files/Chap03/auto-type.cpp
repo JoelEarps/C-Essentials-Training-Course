@@ -9,7 +9,8 @@ string func() {
 }
 
 int main() {
-    auto x = func();
+    auto x = func(); //declare x with auto type and intialise with return value of func - assumes x is a string
+    //could equally just put string infront of x
     printf("x is %s\n", x.c_str());
     if(typeid(x) == typeid(string)) puts("x is string");
     return 0;
@@ -23,3 +24,5 @@ int main() {
 //union is a set of overlapping objects
 //pointers - reference to object of particular type
 //references are immutable
+
+//function that retursn a string

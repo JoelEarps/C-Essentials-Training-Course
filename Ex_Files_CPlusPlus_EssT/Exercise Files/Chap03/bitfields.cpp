@@ -3,7 +3,7 @@
 using namespace std;
 
 struct preferences {
-    bool likesMusic : 1;
+    bool likesMusic : 1; //number represents number of bits set aside for each value
     bool hasHair : 1;
     bool hasInternet : 1;
     bool hasDinosaur : 1;
@@ -29,3 +29,6 @@ int main() {
     
     return 0;
 }
+
+//how data stored i memory dependent on target architecture
+//can be trouble in concurrent or thread programming

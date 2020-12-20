@@ -4,8 +4,8 @@
 #include <cstdint>
 using namespace std;
 
-enum card_suit : uint8_t { SPD, HRT, DIA, CLB };
-enum card_rank : uint8_t { ACE = 1, DEUCE = 2, JACK = 11, QUEEN, KING };
+enum card_suit : uint8_t { SPD, HRT, DIA, CLB }; //if dont specifcy it defualts to an int
+enum card_rank : uint8_t { ACE = 1, DEUCE = 2, JACK = 11, QUEEN, KING }; //definition goes sequentially to last specificed numbers
 
 constexpr const char * aceString = "Ace";
 constexpr const char * jckString = "Jack";
@@ -32,6 +32,10 @@ card deck[52] = {
     { 1, CLB }, { 2, CLB }, { 3, CLB }, { 4, CLB }, { 5, CLB }, { 6, CLB }, { 7, CLB },
     { 8, CLB }, { 9, CLB }, { 10, CLB }, { 11, CLB }, { 12, CLB }, { 13, CLB }
 };
+
+//each card uses card structure
+
+
 
 void print_card( const card & c ) {
     if(c.rank > DEUCE && c.rank < JACK) {
@@ -80,3 +84,6 @@ int main() {
     
     return 0;
 }
+
+//enum looks synatically like a tape - enumearted names work like consts rather than types
+//default based on int type
