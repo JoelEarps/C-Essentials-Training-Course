@@ -4,7 +4,7 @@
 #include <new>
 using namespace std;
 
-constexpr size_t count = 1024;
+constexpr size_t count = 1024; //use for allocating space
 
 int main() {
     printf("allocate space for %lu long int at *ip with new\n", count);
@@ -12,6 +12,7 @@ int main() {
     // allocate array
     long int * ip;
     
+    //try ctach block using to catch exceptions 
     try {
         ip = new long int [count];
     } catch (std::bad_alloc & ba) {
@@ -31,8 +32,15 @@ int main() {
     puts("");
     
     // deallocate array
-    delete [] ip;
+    delete [] ip; //if one object don't need square braces, but it has to match new (and amoutn defined after that)
     puts("space at *ip deleted");
     
     return 0;
 }
+//used to allocate free memory in c++ - speific to c++ and not availble in C
+//malloc and free are the ways to do it in C whereas new and free are used to do it in c++
+//try catch will see if there is enough memory and cacth that error if it occurs
+//if you dont destory the memory after use it will cause a meory leak
+
+
+

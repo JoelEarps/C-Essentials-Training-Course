@@ -5,6 +5,7 @@
 using namespace std;
 
 // unsigned 8-bit to string
+//converts an 8 but byte to string represenation of bits as c++ std doesnt have one
 const char * u8_to_cstr(const uint8_t & x) {
     static char buf[sizeof(x) * 8 + 1];
     for(char & c : buf) c = 0; // reset buffer
@@ -27,3 +28,6 @@ int main()
     
     return 0;
 }
+
+//binary operations on integer values
+
