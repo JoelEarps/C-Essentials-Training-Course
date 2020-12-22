@@ -28,3 +28,5 @@ int main() {
     printf("volume of a 2 x 3 x 4 cuboid: %.3lf\n", volume(2.0, 3.0, 4.0));
     return 0;
 }
+//choose function based on siganture - c must have unique name
+//signature = func name, return type and list of input types

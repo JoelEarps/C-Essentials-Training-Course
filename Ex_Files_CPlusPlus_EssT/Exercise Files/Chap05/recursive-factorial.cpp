@@ -13,3 +13,7 @@ int main() {
     printf("Factorial of %ld is %ld\n", n, factorial(n));
     return 0;
 }
+
+//recrursive function is a function that refers to itself e.g. factorial
+//every call memory is allocated for function call overhead on the stack - better to use a loop
+ 
