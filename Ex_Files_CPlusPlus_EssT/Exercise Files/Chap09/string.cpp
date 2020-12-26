@@ -3,13 +3,13 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+//designed to work on strings comparitvely and intuitively
 int main() {
     string s1 = "This is a string";
-    string::iterator it;
+    string::iterator it; //string interator
     
     // size & length
-    cout << "size is same as length: " << s1.size() << endl;
+    cout << "size is same as length: " << s1.size() << endl; //size and length get the same result
     cout << "size is same as length: " << s1.length() << endl;
     
     // + for concatenation
@@ -18,7 +18,7 @@ int main() {
     cout << s1 + ":" + s2 << endl;
     
     // compare
-    cout << "is s1 == s2? " << (s1 == s2 ? "yes" : "no") << endl;
+    cout << "is s1 == s2? " << (s1 == s2 ? "yes" : "no") << endl; //==, >, < works on during on its coilation
     cout << "copy-assign s2 = s1" << endl;
     s2 = s1;
     cout << "is s1 == s2? " << (s1 == s2 ? "yes" : "no") << endl;
@@ -27,7 +27,7 @@ int main() {
     cout << "is \"other string\"? > s1  " << ("other string" > s1 ? "yes" : "no") << endl;
     cout << "is \"other string\" < s1? " << ("other string" < s1 ? "yes" : "no") << endl;
     
-    // iteration
+    // iteration - like any other container
     cout << "each character: ";
     for( char c : s1 ) {
         cout << c << " ";

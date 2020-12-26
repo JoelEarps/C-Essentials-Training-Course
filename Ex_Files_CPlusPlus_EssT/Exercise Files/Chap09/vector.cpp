@@ -5,13 +5,16 @@
 #include <vector>
 using namespace std;
 
+//vector template class is defined in the template header
+
+
 int main() {
     cout << "Vector from initializer list: " << endl;
     vector<int> vi1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     
-    cout << "size: " << vi1.size() << endl;
-    cout << "front: " << vi1.front() << endl;
-    cout << "back: " << vi1.back() << endl;
+    cout << "size: " << vi1.size() << endl; //size
+    cout << "front: " << vi1.front() << endl; //front element
+    cout << "back: " << vi1.back() << endl; //back element
     
     // iterator
     cout << endl << "Iterator:" << endl;
@@ -23,16 +26,16 @@ int main() {
     cout << endl;
     
     cout << endl << "Index:" << endl;
-    cout << "element at 5: " << vi1[5] << endl;
-    cout << "element at 5: " << vi1.at(5) << endl;
+    cout << "element at 5: " << vi1[5] << endl; //index vector just like array
+    cout << "element at 5: " << vi1.at(5) << endl; //or you can use the at function
     
     cout << endl << "Range-based for loop:" << endl;
     for (int & i : vi1) {
-        cout << i << ' ';
+        cout << i << ' '; //range based for loop
     }
     cout << endl;
     
-    cout << endl << "Insert 42 at begin + 5: " << endl;
+    cout << endl << "Insert 42 at begin + 5: " << endl; //insert elements, erase elements and add values onto the back
     vi1.insert(vi1.begin() + 5, 42);
     cout << "size: " << vi1.size() << endl;
     cout << "vi1[5]: " << vi1[5] << endl;
@@ -72,3 +75,4 @@ int main() {
     
     return 0;
 }
+//fundamental conatiner type - look at advantages of using this over an array

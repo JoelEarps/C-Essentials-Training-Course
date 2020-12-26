@@ -4,12 +4,14 @@
 #include <string>
 #include <iomanip>
 using namespace std;
-
+//most of iostream library is designed for back end support 
+//two types, input streams and output streams
 int main() {
     // cout and cin to get a string
     string istr;
     cout << "Prompt: ";
-    cin >> istr;    // one word at a time
+    cin >> istr;    // one word at a time, will only return first word - word orientated
+    //lines need to use cin.getline(buffer, size of(buffer)) - line orientated
     cout << "Input: " << istr << endl;
     
     // integer formatting
@@ -19,7 +21,7 @@ int main() {
     int i3 = 5555;
     cout << "default: " << i1 << ' ' << i2 << ' ' << i3 << endl;
     cout << "hex: " << hex << i1 << ' ' << i2 << ' ' << i3 << endl;
-    cout << "hex with showbase: " << showbase << hex << i1 << ' ' << i2 << ' ' << i3 << endl;
+    cout << "hex with showbase: " << showbase << hex << i1 << ' ' << i2 << ' ' << i3 << endl; //hex modifier with 0x before then i.e. in proper format
     cout << "octal with showbase: " << oct << i1 << ' ' << i2 << ' ' << i3 << endl;
     cout << "default: " << noshowbase << dec << i1 << ' ' << i2 << ' ' << i3 << endl;
     
@@ -34,7 +36,7 @@ int main() {
     cout << "scientific: " << scientific << d1 << ' ' << d2 << ' ' << d3 << ' ' << endl;
     cout << "fixed (3): " << setprecision(3) << fixed << d1 << ' ' << d2 << ' ' << d3 << ' ' << endl;
     cout << "scientific (7): " << setprecision(7) << scientific << d1 << ' ' << d2 << ' ' << d3 << ' ' << endl;
-    cout.unsetf(ios_base::floatfield);
+    cout.unsetf(ios_base::floatfield); //unset all flags
     cout << "default: " << d1 << ' ' << d2 << ' ' << d3 << ' ' << endl;
     
     // string formatting options

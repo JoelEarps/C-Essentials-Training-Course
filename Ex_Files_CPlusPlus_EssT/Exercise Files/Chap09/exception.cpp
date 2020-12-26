@@ -3,6 +3,7 @@
 #include <iostream>
 #include <exception>
 using namespace std;
+//provide description of exception being thrown
 
 class E : public exception {
     const char * msg;
@@ -14,11 +15,16 @@ public:
 
 void broken() {
     cout << "this is a broken function" << endl;
-    throw exception();
+    throw E("ouch");
 }
 
 int main() {
     cout << "let's have an emergency!" << endl;
-    broken();
+    try{
+        broken();
+    } catch (E & e) {
+        cout << e.what() << endl;
+    }
+    
     return 0;
 }
