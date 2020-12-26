@@ -3,13 +3,17 @@
 #include <cstdio>
 using namespace std;
 
-template <typename T>
+template <typename T> //template arguement list - interchangable with the word class
 T maxof ( T a, T b ) {
     return ( a > b ? a : b );
 }
 
 int main( int argc, char ** argv ) {
-    int m = maxof<int>( 7, 9 );
+    int m = maxof<int>( 7, 9 ); //<int> specifys the type passed to the template
     printf("max is: %d\n", m);
     return 0;
 }
+
+//c++ supprots template functions and classes
+//max value of two parameters
+//cannot define template within a block

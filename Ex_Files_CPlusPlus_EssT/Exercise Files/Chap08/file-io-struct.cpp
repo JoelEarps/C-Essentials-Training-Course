@@ -7,7 +7,7 @@ using namespace std;
 
 constexpr size_t maxlen = 111;
 
-struct S {
+struct S { //structure is two unsigned ints and then the max length of a string
     uint8_t num;
     uint8_t len;
     char str[maxlen + 1];
@@ -15,11 +15,11 @@ struct S {
 
 int main( int argc, char ** argv ) {
     const char * fn = "test.file";            // file name
-    const char * cstr = "This is a literal C-string.";
+    const char * cstr = "This is a literal C-string."; 
     
     // create/write the file
     printf("writing file\n");
-    FILE * fw = fopen(fn, "wb");
+    FILE * fw = fopen(fn, "wb"); //wb includes b for binary file - some OS translate line endings in text file which would alter binary file
     
     static struct S buf1;
     for( int i = 0; i < 5; i++ ) {

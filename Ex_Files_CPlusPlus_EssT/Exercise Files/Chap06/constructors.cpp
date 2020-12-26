@@ -5,28 +5,28 @@
 using namespace std;
 
 const string unk = "unknown";
-const string clone_prefix = "clone-";
+const string clone_prefix = "clone-"; //another const prefix called clone-
 
 // -- interface --
 class Animal {
-    string _type = unk;
+    string _type = unk; //three private data members all initlaised to unknown values
     string _name = unk;
     string _sound = unk;
 public:
     Animal();   // default constructor
     Animal(const string & type, const string & name, const string & sound);
-    Animal(const Animal &); // copy constructor
+    Animal(const Animal &); // copy constructor - takes another object of same type
     ~Animal();  // destructor
     void print() const;
 };
 
 // -- implementation --
 Animal::Animal() {
-    puts("default constructor");
+    puts("default constructor"); //has no arguments - no parameters. This one doesnt do anything but can have default values
 }
 
-Animal::Animal(const string & type, const string & name, const string & sound)
-: _type(type), _name(name), _sound(sound) {
+Animal::Animal(const string & type, const string & name, const string & sound) //takes three strings and initilaise members without executing a body
+: _type(type), _name(name), _sound(sound) { //name of a private data memeber - then value passed to it
     puts("constructor with arguments");
 }
 
@@ -52,9 +52,11 @@ int main() {
     const Animal b("goat", "bob", "baah");
     b.print();
     
-    const Animal c = b;
+    const Animal c = b; //copy constructor - b is being used to intialise c and copying data over
     c.print();
     
     puts("end of main");
     return 0;
 }
+//special member functions that serve a particular person
+//destructor is called at the end of main automatically to clear the stack

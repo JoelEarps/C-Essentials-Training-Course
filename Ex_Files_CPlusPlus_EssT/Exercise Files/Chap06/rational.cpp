@@ -14,7 +14,7 @@ public:
     inline int numerator() const { return _n; };
     inline int denominator() const { return _d; };
     Rational & operator = ( const Rational & );
-    Rational operator + ( const Rational & ) const;
+    Rational operator + ( const Rational & ) const; //const safe
     Rational operator - ( const Rational & ) const;
     Rational operator * ( const Rational & ) const;
     Rational operator / ( const Rational & ) const;
@@ -73,3 +73,4 @@ int main() {
     cout << a << " / " << b << " = " << a / b << endl;
     return 0;
 }
+//two ways to overload - with member functions and non member functions

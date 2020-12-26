@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-class A {
+class A { //classes based upon c structures
     int ia = 0;
     string sb = "";
     int ic = 0;
